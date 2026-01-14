@@ -1,6 +1,7 @@
 ## 🌦 Weather & Air Quality Dashboard (Power BI)
 
 📌 Project Overview
+
 This project is an interactive Weather & Air Quality Dashboard built using Microsoft Power BI with live data fetched from a Weather API.
 The dashboard provides real-time and forecasted insights on weather conditions, air quality, and environmental indicators for multiple cities.
 The primary goal of this project was to practice:
@@ -10,6 +11,7 @@ The primary goal of this project was to practice:
 •	Building a clean, information-rich dashboard
 ________________________________________
 🎯 Objectives
+
 •	Visualize current weather conditions for multiple cities
 •	Analyze short-term weather forecasts 
 •	Monitor Air Quality Index (AQI) and pollutants
@@ -17,6 +19,7 @@ ________________________________________
 •	Build a scalable data model using a master table approach
 ________________________________________
 🛠 Tools & Technologies
+
 •	Microsoft Power BI
 •	Weather API – As data source (website link : https://www.weatherapi.com/ )
 •	Power Query – API data transformation
@@ -24,6 +27,7 @@ ________________________________________
 •	Data Modeling – Fact-style master table design
 ________________________________________
 🗂 Data Architecture & Modeling
+
 🔹 Step 1: API Data Ingestion
 •	Weather API returns data for one city per API call
 •	The base query was duplicated
@@ -45,6 +49,7 @@ This separation improves:
 •	Visualization flexibility
 ________________________________________
 📊 Dashboard Features
+
   🌡 Current Weather
 •	Temperature
 •	Weather condition (e.g., partly cloudy)
@@ -63,6 +68,7 @@ ________________________________________
 •	Day-wise probability of rain (%)
 ________________________________________
 🌫 Air Quality Index (AQI) Analysis
+
   Pollutants Tracked
 •	PM2.5
 •	PM10
@@ -76,7 +82,9 @@ ________________________________________
 •	Health-based status and suggestions
 ________________________________________
 🧠 DAX Measures (Key Logic)
+
 🎨 AQI Color Indicator (Example: PM10)
+
 PM10 Color = 
 VAR AQI =
     ROUND(
@@ -95,6 +103,7 @@ SWITCH (
 )
 ________________________________________
 💡 AQI Health Suggestion
+
 AQI Suggestion = 
 VAR AQI = ROUND(SELECTEDVALUE('current'[current.air_quality.pm10]),0)
 RETURN
@@ -109,6 +118,7 @@ SWITCH(
 )
 ________________________________________
 📌 AQI Status
+
 AQI Status = 
 VAR AQI = ROUND(SELECTEDVALUE('current'[current.air_quality.pm10]),0)
 RETURN
@@ -123,6 +133,7 @@ SWITCH(
 )
 ________________________________________
 📈 Key Learnings
+
 •	Handling API-based data in Power BI
 •	Designing a master table architecture
 •	Creating reusable analytical tables
@@ -131,26 +142,31 @@ ________________________________________
 •	Dashboard storytelling with environmental data
 ________________________________________
 🧮 Dashboard Overview
+
   This view shows the overall weather summary with key KPIs and city-wise metrics.
   ![Dashboard Overview](images/dashboard_overview.png)
 ________________________________________
 🚀 How to Use
+
 1.	Download the .pbix file
 2.	Open in Power BI Desktop
 3.	Refresh data (API key required if not embedded)
 4.	Interact with visuals and city selectors
 ________________________________________
 🔮 Future Enhancements
+
 •	Add automatic city selection via slicer
 •	Integrate historical weather trends
 •	Improve AQI weighting using standard AQI formula
 •	Deploy dashboard using Power BI Service
 ________________________________________
 👤 Author
+
 Bikram Sadhu
 🔗 LinkedIn: (https://www.linkedin.com/in/bikram-sadhu-9769b2284/)
 ________________________________________
 ⭐ Feedback
+
 Suggestions and improvements are welcome.
 This project is part of my continuous learning journey in Data Analytics.
 
