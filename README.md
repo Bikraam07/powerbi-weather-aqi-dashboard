@@ -132,7 +132,7 @@ ________________________________________
 ________________________________________
 🧮 Dashboard Overview
   This view shows the overall weather summary with key KPIs and city-wise metrics.
-  ![Dashboard Overview](screenshots/dashboard_overview.png)
+  ![Dashboard Overview](images/dashboard_overview.png)
 ________________________________________
 🚀 How to Use
 1.	Download the .pbix file
