@@ -4,7 +4,9 @@
 
 This project is an interactive Weather & Air Quality Dashboard built using Microsoft Power BI with live data fetched from a Weather API.
 The dashboard provides real-time and forecasted insights on weather conditions, air quality, and environmental indicators for multiple cities.
+
 The primary goal of this project was to practice:
+
 •	API-based data ingestion
 •	Data modeling in Power BI
 •	DAX-driven conditional formatting
@@ -29,21 +31,29 @@ ________________________________________
 🗂 Data Architecture & Modeling
 
 🔹 Step 1: API Data Ingestion
+
 •	Weather API returns data for one city per API call
 •	The base query was duplicated
 •	City name was changed at the source level to fetch data for three different cities
+
 🔹 Step 2: Master Table Creation
+
 •	All city-level tables were merged into a single table named:
 master table
 This ensured:
 •	Centralized data control
 •	Easy scalability for adding more cities
+
 🔹 Step 3: Logical Table Separation
+
 Using the master table as reference, three analytical tables were created:
+
 •	current → Current weather & AQI data
 •	forecast_day → Daily weather forecast
 •	forecast_hours → Hourly weather forecast
+
 This separation improves:
+
 •	Model clarity
 •	Measure performance
 •	Visualization flexibility
@@ -51,6 +61,7 @@ ________________________________________
 📊 Dashboard Features
 
   🌡 Current Weather
+  
 •	Temperature
 •	Weather condition (e.g., partly cloudy)
 •	Humidity
@@ -59,24 +70,33 @@ ________________________________________
 •	Precipitation
 •	Pressure
 •	UV Index
+
   📅 Forecast Analysis
+  
 •	7-day temperature trend (line chart)
 •	Daily weather cards with icons
+
   🌅 Sunrise & Sunset
+  
 •	Daily sunrise and sunset timings per city
+
   🌧 Chance of Rain
+  
 •	Day-wise probability of rain (%)
 ________________________________________
 🌫 Air Quality Index (AQI) Analysis
 
   Pollutants Tracked
+  
 •	PM2.5
 •	PM10
 •	CO
 •	NO₂
 •	SO₂
 •	O₃
+
   AQI Indicator
+  
 •	Dynamic AQI gauge
 •	Color-coded severity levels
 •	Health-based status and suggestions
@@ -86,6 +106,7 @@ ________________________________________
 🎨 AQI Color Indicator (Example: PM10)
 
 PM10 Color = 
+
 VAR AQI =
     ROUND(
         SELECTEDVALUE ( 'current'[current.air_quality.pm10] ),
@@ -105,6 +126,7 @@ ________________________________________
 💡 AQI Health Suggestion
 
 AQI Suggestion = 
+
 VAR AQI = ROUND(SELECTEDVALUE('current'[current.air_quality.pm10]),0)
 RETURN
 SWITCH(
@@ -120,6 +142,7 @@ ________________________________________
 📌 AQI Status
 
 AQI Status = 
+
 VAR AQI = ROUND(SELECTEDVALUE('current'[current.air_quality.pm10]),0)
 RETURN
 SWITCH(
@@ -163,6 +186,7 @@ ________________________________________
 👤 Author
 
 Bikram Sadhu
+
 🔗 LinkedIn: (https://www.linkedin.com/in/bikram-sadhu-9769b2284/)
 ________________________________________
 ⭐ Feedback
