@@ -107,7 +107,7 @@ ________________________________________
 
 ### 🎨 AQI Color Indicator (Example: PM10)
 
-'''
+```
 PM10 Color = 
 
 VAR AQI =
@@ -125,11 +125,12 @@ SWITCH (
     AQI <= 300, "#ff5b0f", -- Severe
     "#d95243"              -- Hazardous
 )
-'''
+```
+
 ________________________________________
 ### 💡 AQI Health Suggestion
 
-'''
+```
 AQI Suggestion = 
 
 VAR AQI = ROUND(SELECTEDVALUE('current'[current.air_quality.pm10]),0)
@@ -143,11 +144,11 @@ SWITCH(
     AQI <= 300, "Avoid outdoor activity if possible",
     "Stay indoors, wear a mask if outside"
 )
-'''
+```
 ________________________________________
 ### 📌 AQI Status
 
-'''
+```
 AQI Status = 
 
 VAR AQI = ROUND(SELECTEDVALUE('current'[current.air_quality.pm10]),0)
@@ -161,7 +162,7 @@ SWITCH(
     AQI <= 300, "Very Unhealthy",
     "Hazardous"
 )
-'''
+```
 ________________________________________
 ## 📈 Key Learnings
 
