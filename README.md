@@ -192,6 +192,14 @@ ________________________________________
 -	Improve AQI weighting using standard AQI formula
 -	Deploy dashboard using Power BI Service
 ________________________________________
+## 🙌 Acknowledgement
+
+This project was developed as part of my learning process by following a Power BI tutorial by **The Developer**  
+( https://www.youtube.com/watch?v=P8HB8dMfKNc ).
+
+The dashboard was recreated independently by me with a focus on understanding the data modeling approach, DAX logic, and overall dashboard design.
+
+________________________________________
 👤 Author
 
 Bikram Sadhu
